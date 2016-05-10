@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ex 02 - Developing mobile-web apps</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="script.js"></script>
+  </head> 
+  <body>
+    <div class="wrapper"> 
+        <div class="menuButtons" > 
+            <button class="button" style="vertical-align:middle" onclick="openProfile()"><span>Profile </span></button>
+            <button class="button" style="vertical-align:middle" onclick="openCalc()"><span>Calc </span></button>
+            <button class="button" style="vertical-align:middle" onclick="openReadMe()"><span>ReadMe </span></button>
+        </div>
+        <div id="line"> </div>
+        <div id="profileSite" class="centerWrapper">
+            <img class="imgL" src="http://cytegic.com/wp-content/uploads/2016/02/Web_Logo.png">
+            <br>
+            <p class="content"> Hello <br> Im Onn and im working in a company called Cytegic <br> Have a Nice Day :) </p>
+        </div>
+        <div id="readme" class="centerWrapper">
+            <p class= "question"> Q: What was the hardest part to do in this Ex? </p>
+            <p class="answer"> A: Getting to know CSS Layout </p>
+            <p class="question"> Q: What was the nicest part to do in this Ex? </p>
+            <p class="answer"> A: Do google DOM manipulation tranning </p>
+        </div>
+        <div id="calc" class="centerWrapper">
+            <h1> Calculator Input: </h1> 
+            <form id="calcform"  onsubmit="return false">
+                <input type="text" font="20" id="calcResult" onkeydown = "if (event.keyCode == 13)
+     document.getElementById('runCalc').click()" > <br> <br>
+                <div id="centerbutton">
+                    <input type="button" id="runCalc" class="calcbuttons" value="Run" onclick="evalu()">
+                </div>
+                <div id="clearbtn">
+                    <input type="button" id="startoverbtn" class="calcbuttons" value="Start Over" onclick="newCalc()">
+                </div>
+            </form>
+        </div>
+    </div>
+  </body>
+</html>
