@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ex 02 - Developing mobile-web apps</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link href="stylesheets/style.css" rel="stylesheet"/>
+    <script src="javascripts/script.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="wrapper" id="wrapper">
+    <div class="menuButtons">
+        <button class="button" style="vertical-align:middle" onclick="openProfile()"><span>Profile </span></button>
+        <button class="button" style="vertical-align:middle" onclick="openCalc()"><span>Calc </span></button>
+        <button class="button" style="vertical-align:middle" onclick="openReadMe()"><span>ReadMe </span></button>
+    </div>
+    <div id="line"></div>
+    <div id="profileSite" class="centerWrapper">
+        <img class="imgL" src="images/Web_Logo.png">
+        <br>
+        <h4>Game Of Thrones Random Quote:</h4>
+        <p class="content" id="randomQuote"> Hello <br> Im Onn and im working in a company called Cytegic <br> Have a Nice Day :) </p>
+    </div>
+    <div id="readme" class="centerWrapper">
+        <p class="question"> Q: What was the hardest part to do in this Ex? </p>
+        <p class="answer"> A: Getting to know CSS Layout </p>
+        <p class="question"> Q: What was the nicest part to do in this Ex? </p>
+        <p class="answer"> A: Do google DOM manipulation tranning </p>
+    </div>
+    <div id="calc" class="centerWrapper">
+        <h1> Calculator Input: </h1>
+        <form id="calcform" onsubmit="return false">
+            <input type="text" font="20" id="calcResult" onkeydown="if (event.keyCode == 13)
+     document.getElementById('runCalc').click()"> <br> <br>
+            <div id="centerbutton">
+                <input type="button" id="runCalc" class="calcbuttons" value="Run" onclick="evalu()">
+            </div>
+            <div id="clearbtn">
+                <input type="button" id="startoverbtn" class="calcbuttons" value="Start Over" onclick="newCalc()">
+            </div>
+        </form>
+    </div>
+</div>
+<div id="logindiv">
+    <div id="fullscreen_bg" class="fullscreen_bg"/>
+    <div class="container">
+        <div class="form-signin">
+            <h1 class="form-signin-heading text-muted">Sign In</h1>
+            <input id="userNameBox" type="text" class="form-control" placeholder="Username" required="" autofocus="">
+            <input id="passBox" type="password" class="form-control" placeholder="Password" required="">
+            <button class="btn btn-lg btn-primary btn-block" onclick="sendLoginReq()" >
+                Login
+            </button>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
