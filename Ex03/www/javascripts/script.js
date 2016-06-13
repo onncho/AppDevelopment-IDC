@@ -10,7 +10,6 @@ function openCalc() {
     } catch (error) {
         console.log(error);
     }
-
 }
 
 function openWrapper() {
@@ -50,7 +49,7 @@ function evalu() {
     //save the result on the server
     try {
         $.post("/saveResult", {lastResult: result}, function (res) {
-          console.log("saving is done");
+            console.log("saving is done");
         });
     } catch (error) {
         console.log(error);
@@ -70,9 +69,6 @@ function newCalc() {
 function sendLoginReq() {
     var userName = document.getElementById("userNameBox").value;
     var pass = document.getElementById("passBox").value;
-    //TODO: Debug
-    console.log(userName);
-    console.log(pass);
     $.post("/login", {username: userName, password: pass}, function (res) {
         if (res == "true") {
             openWrapper();
