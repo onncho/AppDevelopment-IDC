@@ -83,26 +83,4 @@ function sendLoginReq() {
     })
 }
 
-/*
- function drawButtons() {
-
- if (document.getElementById('calc').style.display == "") {
- for (var index = 0; index < 10; index++) {
- createButtons(index);
- }
- }
- }
- */
-
-/*
- function createButtons(num) {
- var node = document.createElement("input");
- node.name = num;
- node.type = "button";
- node.value = num;
- node.className = "btn";
- document.getElementById('calcform').appendChild(node);
- }
- */
-
 

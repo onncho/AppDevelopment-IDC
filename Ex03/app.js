@@ -79,7 +79,9 @@ app.get("/randomQuote",function(req,resp){
  */
 app.listen(port);
 console.log("Server is Listening on : " + port);
-//server.on('error', onError);
-//server.on('listening', onListening);
 
-//module.exports = app;
+server.on('error', function (error) {
+    console.log(error);
+});
+
+
